@@ -1,28 +1,27 @@
-package baitap_ungdungmap;
+package bai_tap_chuong_trinh_tong_hop_oop;
 
-public class Student{
-    final private int id;
+public class Student {
+    private int id;
     private String name;
     private int age;
     private String address;
-    private boolean gender;
+    private double gpa;
 
-    public Student(int id) {
-        this.id = id;
-    }
-
-    public Student(int id, String name, int age, String address, boolean gender) {
+    public Student(int id, String name, int age, String address, double gpa) {
         this.id = id;
         this.name = name;
         this.age = age;
         this.address = address;
-        this.gender = gender;
+        this.gpa = gpa;
     }
 
     public int getId() {
         return id;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -47,28 +46,23 @@ public class Student{
     public void setAddress(String address) {
         this.address = address;
     }
-    public boolean isGender() {
-        return gender;
+
+    public double getGpa() {
+        return gpa;
     }
-    public void setGender(boolean gender) {
-        this.gender = gender;
-    }
-    public String displayGender(){
-        if (this.gender){
-            return "nam";
-        }else {
-            return "nữ";
-        }
+
+    public void setGpa(double gpa) {
+        this.gpa = gpa;
     }
 
     @Override
     public String toString() {
         return "Student{" +
-                "id=" + getId() +
+                "id=" + id +
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", address='" + address + '\'' +
-                ", gender='" + displayGender() + '\'' +
+                ", gpa=" + gpa +
                 '}';
     }
 }
